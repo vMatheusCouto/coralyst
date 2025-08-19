@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Markdown styles, credits for: https://github.com/sindresorhus/github-markdown-css*/
+@import url("../styles/markdown-github.css");
+/* --------------- */
+
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
