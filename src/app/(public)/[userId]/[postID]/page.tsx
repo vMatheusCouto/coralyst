@@ -5,7 +5,7 @@ import gfm from "remark-gfm";
 
 export default function ArticleView() {
   return (
-    <main className="w-full p-8 flex flex-col gap-4">
+    <main className="w-full p-8 flex flex-col gap-4 overflow-y-auto">
       <div className="flex items-center gap-4">
         <Avatar
           size="md"
