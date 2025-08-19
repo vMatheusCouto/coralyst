@@ -1,14 +1,12 @@
+import Header from "#/components/organisms/header";
+import Panel from "#/components/organisms/panel";
+import Sidebar from "#/components/organisms/sidebar";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "next-themes";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const font = JetBrains_Mono({
   subsets: ["latin"],
 });
 
@@ -23,12 +21,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" suppressHydrationWarning>
+      <div className="w-screen h-screen">
+        <div className="w-screen flex h-[8vh] border-b-[0.1px] border-accent">
+          <Header />
+        </div>
+
+        <div className="w-screen flex h-[92vh]">
+          <Sidebar />
+          <body
+            className={`${font.className} antialiased flex-1 w-full overflow-y-scroll no-scrollbar`}
+          >
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              {children}
+            </ThemeProvider>
+          </body>
+          <Panel />
+        </div>
+      </div>
     </html>
   );
 }

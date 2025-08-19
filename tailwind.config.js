@@ -1,7 +1,7 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
+import aspectRatio from "@tailwindcss/aspect-ratio";
 module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  plugins: [aspectRatio],
 };
