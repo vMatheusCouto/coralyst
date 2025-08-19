@@ -44,16 +44,16 @@ export default function PostCard() {
         <li>
           <ul className="flex gap-1">
             <li>
-              <Badge type="outline">Teste</Badge>
+              <Badge style="outline">Teste</Badge>
             </li>
             <li>
-              <Badge type="outline">Teste</Badge>
+              <Badge style="outline">Teste</Badge>
             </li>
             <li>
-              <Badge type="outline">Teste</Badge>
+              <Badge style="outline">Teste</Badge>
             </li>
             <li>
-              <Badge type="outline">Teste</Badge>
+              <Badge style="outline">Teste</Badge>
             </li>
           </ul>
         </li>

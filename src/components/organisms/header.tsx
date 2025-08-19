@@ -9,7 +9,7 @@ export default function Header() {
         <li className="flex-1 w-full max-w-full text-accent p-2 border-accent/20 border-1 rounded-md focus:text-white flex items-center justify-start gap-4">
           <Search className="stroke-1" />
           <Input
-            type="ghost"
+            style="ghost"
             placeholder="Type something..."
             className="focus:text-white"
           />
@@ -17,8 +17,8 @@ export default function Header() {
         <li>
           <nav>
             <ul className="flex gap-4">
-              <li>Discuss</li>
               <li>Discover</li>
+              <li>Subscribe</li>
             </ul>
           </nav>
         </li>

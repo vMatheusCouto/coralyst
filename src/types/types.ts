@@ -1,3 +1,5 @@
+import { InputHTMLAttributes } from "react";
+
 export interface AvatarTypes {
   size: "sm" | "md" | "lg";
   className?: string;
@@ -11,12 +13,11 @@ export interface SeparatorTypes {
 
 export interface BadgeTypes {
   className?: string;
-  type: "filled" | "outline" | "destructive";
+  style: "filled" | "outline" | "destructive";
   children: React.ReactNode;
 }
 
-export interface InputTypes {
+export interface InputTypes extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
-  type: "default" | "ghost";
-  placeholder?: string;
+  style: "default" | "ghost";
 }
