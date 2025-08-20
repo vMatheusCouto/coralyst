@@ -5,30 +5,32 @@ import gfm from "remark-gfm";
 
 export default function ArticleView() {
   return (
-    <main className="w-full p-8 flex flex-col gap-4 overflow-y-auto">
-      <div className="flex items-center gap-4">
-        <Avatar
-          size="md"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoXi3MDuEWZCR7_5orPdlYKwDvHtT0oYJQ2Q&s"
-        />
-        <div className="flex flex-col justify-center">
-          <p className="leading-4">ctheusg</p>
-          <p className="text-foreground/40">2 hours ago</p>
+    <main className="w-full p-4 overflow-y-auto">
+      <div className="flex flex-col gap-4 p-8 border-1 border-accent rounded-lg">
+        <div className="flex items-center gap-4">
+          <Avatar
+            size="md"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoXi3MDuEWZCR7_5orPdlYKwDvHtT0oYJQ2Q&s"
+          />
+          <div className="flex flex-col justify-center">
+            <p className="leading-4">ctheusg</p>
+            <p className="text-foreground/40">2 hours ago</p>
+          </div>
         </div>
-      </div>
-      <p>
-        As the title says, here are all the useful types that Im using every day
-        or create new types on top of them. I thought it might be handy for some
-        people so I just share here and this will be updated moving forward:
-      </p>
-      <div className="p-4 relative border border-background/30 bg-accent/20 rounded-2xl">
-        <h1 className="bg-accent/30 p-2 rounded-sm font-bold ">
-          Title of the article
-        </h1>
-        <Separator direction="horizontal" />
-        <div className="markdown-body">
-          <ReactMarkdown remarkPlugins={[gfm]}>
-            {`
+        <p>
+          As the title says, here are all the useful types that Im using every
+          day or create new types on top of them. I thought it might be handy
+          for some people so I just share here and this will be updated moving
+          forward:
+        </p>
+        <div className="p-8 relative border border-background/30 bg-accent/20 rounded-2xl">
+          <h1 className="bg-accent/30 p-2 rounded-sm font-bold ">
+            Title of the article
+          </h1>
+          <Separator direction="horizontal" />
+          <div className="markdown-body">
+            <ReactMarkdown remarkPlugins={[gfm]}>
+              {`
 # The Effects of Urbanization on Pollinator Populations
 
 **Authors:** Matheus Couto, Jane Doe
@@ -81,7 +83,8 @@ Urban Sites:  🐝🐝🐝🐝
 Rural Sites: 🐝🐝🐝🐝🐝🐝🐝
 \`\`\`
 `}
-          </ReactMarkdown>
+            </ReactMarkdown>
+          </div>
         </div>
       </div>
     </main>

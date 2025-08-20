@@ -5,7 +5,7 @@ function Avatar({ size, className, src }: AvatarTypes) {
   const sizeMap = {
     sm: "w-8 h-8",
     md: "w-10 h-10",
-    lg: "w-24 h-24",
+    lg: "w-28 h-28",
   };
 
   return (
