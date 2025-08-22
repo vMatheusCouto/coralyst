@@ -12,6 +12,108 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  /* Temp bg (i'll create by myself later), credits for "SelfMadeSystem" */
+  .bg-animated-green {
+    @apply absolute inset-0 bg-black;
+  }
+
+  .bg-animated-green::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      #0000 0,
+      #0000 2px,
+      hsl(120 50% 4%) 2px
+    );
+    background-size: 8px 8px;
+    animation: hiii 5s ease-in-out infinite;
+    --f: blur(3em) brightness(9);
+  }
+
+  @keyframes hiii {
+    0% {
+      backdrop-filter: var(--f) hue-rotate(0deg);
+    }
+    25% {
+      backdrop-filter: var(--f) hue-rotate(-25deg);
+    }
+    28% {
+      backdrop-filter: var(--f) hue-rotate(0deg);
+    }
+    32% {
+      backdrop-filter: var(--f) hue-rotate(-20deg);
+    }
+    39% {
+      backdrop-filter: var(--f) hue-rotate(0deg);
+    }
+    40% {
+      backdrop-filter: var(--f) hue-rotate(-20deg);
+    }
+    41% {
+      backdrop-filter: var(--f) hue-rotate(0deg);
+    }
+    42% {
+      backdrop-filter: var(--f) hue-rotate(-25deg);
+    }
+    44% {
+      backdrop-filter: var(--f) hue-rotate(0deg);
+    }
+    58% {
+      backdrop-filter: var(--f) hue-rotate(-20deg);
+    }
+    64% {
+      backdrop-filter: var(--f) hue-rotate(0deg);
+    }
+    80% {
+      backdrop-filter: var(--f) hue-rotate(-25deg);
+    }
+    to {
+      backdrop-filter: var(--f) hue-rotate(0deg);
+    }
+  }
+
+  .bg-animated-green::before {
+    content: "";
+    position: absolute;
+    inset: -145%;
+    rotate: -45deg;
+    --c: #0f0;
+    --c1: #0a0;
+    background-image:
+      radial-gradient(4px 100px at 0px 235px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 235px, var(--c), #0000),
+      radial-gradient(3px 4px at 150px 117.5px, var(--c1) 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 252px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 252px, var(--c), #0000),
+      radial-gradient(3px 4px at 150px 126px, var(--c1) 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 150px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 150px, var(--c), #0000),
+      radial-gradient(3px 4px at 150px 75px, var(--c1) 100%, #0000 150%);
+    background-size:
+      300px 235px,
+      300px 235px,
+      300px 235px;
+    animation: hi 150s linear infinite;
+  }
+
+  @keyframes hi {
+    0% {
+      background-position:
+        0px 220px,
+        3px 220px,
+        151.5px 337.5px;
+    }
+    to {
+      background-position:
+        0px 6800px,
+        3px 6800px,
+        151.5px 6917.5px;
+    }
+  }
 }
 
 :root {
